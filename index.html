@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/0ecb37a768.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+
+    <! -- first page: the landing page -->
+
+    <div class='wrapper'>
+        <div style="" id="landing">
+            <span class="fa-solid fa-comments landing"></span>
+            <h1 class="chat-logo">WhatsUp</h1>
+            <button type="submit" id="start-chat">Start chat</button>
+        </div>
+    </div>
+
+    <! -- second page: the main page -->
+
+    <div class='wrapper'>
+        <div style="display:none" id='main-page'>
+            <div class="header">
+                <a class = "word">
+                  <i class="fa-solid fa-comments"></i> 
+                WhatsUp
+                </a>
+
+                <button class="bars fa-solid fa-bars"></button>
+                <div class="nav-container" style="display: none">
+                    <ul class="nav" type="none">
+                        <li class="add-contacts"><i class="fa-solid fa-user-group"></i> Add Contacts</li>
+                        <li class="clear-history"><i class=" fa-regular fa-trash-can"></i> Clear History</li>
+                        <li class="setting"><i class="fa-solid fa-gear"></i> Setting</li>
+                        <li class="exit"><i class="fa-solid fa-right-from-bracket"></i> Exit</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="friend">
+                    <i class="fa-solid fa-cat"></i> 
+                    <span data-text="Tel: +44 1234567890" class ="tooltip name">Nicky</span>
+                    <button class="fa-solid fa-video"></button>
+                    <button class="fa-solid fa-phone-flip"></button>
+            </div>
+
+            <div class="menu">
+                <div id="container"><button id="security" type:"submit">
+                    <i class="fa-solid fa-lock"></i> <a>Messages and calls are end-to-end encrypted. No one outside of this chat, not even WhatsUp, can read or listen to them. Tap to learn more.</a>
+                </button></div>
+
+                <div class ="pop privacy"> 
+                    <i class="fa-solid fa-user-shield"></i>
+                    <h3>Your chats and calls are private</h3>
+                    <p id="securityMsg">End-to-end encryption keeps your personal messages and calls between you and the people you choose. Not even WhatsUp can read or listen to them. This includes your:
+                        <ul class="security" type="none">
+                            <li><i class="fa-regular fa-message"></i> Text and voice messages</li>
+                            <li><i class="fa-solid fa-microphone-lines"></i> Audio and video calls</li>
+                            <li><i class="fa-regular fa-file-image"></i> Photos, videos and documents</li>
+                            <li><i class="fa-solid fa-location-dot"></i> Location sharing</li>
+                            <li><i class="fa-solid fa-arrows-spin"></i> Status updates</li>
+                        </ul>
+                    </p>
+                    <button id="ok" type="submit"><i class="fa-regular fa-thumbs-up"></i> Got it!</button>
+                </div>
+
+                <p id="welcome"><i class="fa-regular fa-heart"></i> Nicky is on WhatsUp!</p>
+            </div>
+
+            <div class ="chatbox">
+                <form name="message" action="">
+                    <input name="usermsg" type="text" id="usermsg" />
+                    <button id="send" type="submit" class="fas fa-paper-plane"></button>
+                </form>
+            </div>
+        </div>
+    </div>
+  
+</body>
+</html>
