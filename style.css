@@ -1,0 +1,413 @@
+
+/* set up the whole framework */
+
+*{
+  margin:0;
+  padding:0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.wrapper
+#main-page{
+  display:flex;
+  height: 100vh;
+  flex-direction: column;
+  background-color: rgb(252, 252, 252);
+  overflow:hidden;
+}
+
+.wrapper
+#main-page
+#landing > * {
+  padding: 10px;
+}
+
+/* style the landing page */
+
+#landing{
+  display:flex;
+  flex-direction: column;
+  height: 100vh;
+  flex-direction: column;
+  background-color: green;
+  padding: 0;
+}
+
+.fa-solid.fa-comments.landing{
+  font-size: 120px;
+  text-align: center;
+  position: relative;
+  color:white;
+  top:60px;
+}
+
+.chat-logo{
+  font-size: 60px;
+  top:100px;
+  text-align: center;
+  position: relative;
+  color:white;
+}
+
+button#start-chat{
+  position: relative;
+  background-color: aliceblue;
+  font-size: 35px;
+  padding:10px;
+  top:160px;
+  width: 250px;
+  border-radius: 40%;
+  align-self: center;
+  cursor: pointer;
+  border:none;
+}
+
+button#start-chat:hover{
+  background-color:azure;
+}
+
+button#start-chat:active{
+  background-color: rgb(204, 230, 204);
+}
+
+/* style the main page */
+/* starting from the header */
+
+.header{
+  background-color:green;
+  color:white;
+  font-size: 20px;
+  text-align: center;
+  padding:10px;
+  font-weight: bold;
+}
+
+.word{
+  cursor: pointer;
+}
+
+.bars{
+  position: absolute;
+  right:8px;
+  top:10px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.nav-container{
+  padding: 10px;
+  top:20px;
+  right:10px;
+  background-color: white;
+  color: black;
+  position: absolute;
+  box-sizing: border-box;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+ul.nav{
+  font-size: 20px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.setting:hover{
+  background-color: lightgrey;
+}
+
+.add-contacts:hover{
+  background-color: lightgrey;
+}
+
+.clear-history:hover{
+  background-color: lightgrey;
+}
+
+.exit:hover{
+  background-color: lightgrey;
+}
+   
+.friend {
+   background-color: rgb(234, 230, 230);
+   padding:16px;
+   font-size:20px;
+}
+
+.name{
+  left: 10px;
+  position: absolute;
+}
+
+.tooltip{
+  position: relative;
+  cursor: pointer;
+  
+}
+
+.tooltip:before {
+  content: attr(data-text); 
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  left:100%;
+  margin-left:5px;
+  width:200px;
+  padding:10px;
+  border-radius:10px;
+  background:white;
+  color: black;
+  text-align:center;
+  box-shadow: 5px 5px gainsboro;
+  text-align: left;
+  font-size: 15px;
+  display:none; 
+}
+
+.tooltip:hover:before {
+  display:block;
+}
+
+i.fa-solid.fa-cat{
+  color:rgb(45, 96, 197);
+  font-size:25px;
+}
+
+button.fa-solid.fa-phone-flip{
+  right:12px;
+  font-size: 20px;
+  color: rgb(45,96,197);
+  position:absolute;
+  border:none;
+  background-color: transparent;
+  border-radius: 100%;
+  padding:7px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+}
+
+button.fa-solid.fa-phone-flip:hover{
+  background-color: gainsboro;
+}
+
+button.fa-solid.fa-phone-flip:active{
+  background-color: gray;
+}
+
+button.fa-solid.fa-video{
+  right: 50px;
+  font-size: 20px;
+  color: rgb(45,96,197);
+  position:absolute;
+  border:none;
+  background-color: transparent;
+  border-radius: 100%;
+  padding:7px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+}
+
+button.fa-solid.fa-video:hover{
+  background-color: gainsboro;
+}
+
+button.fa-solid.fa-video:active{
+  background-color: gray;
+}
+
+/* style the main chatting board */
+   
+.menu {
+  flex:1;
+  background-color: antiquewhite;
+  overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+#container{
+  text-align: center;
+  margin:12px;
+}
+
+button#security{
+  width: 300px;
+  background-color: orange;
+  padding:12px;
+  border:none;
+  position: relative;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.pop.privacy{
+  background-color:rgb(253, 251, 247);
+  padding:30px;
+  position: absolute;
+  left: 35%;
+  right: 65%;
+  width: 350px;
+  height: 370px;
+  padding:10px;
+  top:10%;
+  text-align: center;
+  border-radius: 20px;
+  z-index: 999;
+  
+  box-shadow: 5px 10px gainsboro;
+  transform:scale(0,0);
+  transition: .2s;
+}
+
+.fa-solid.fa-user-shield{
+  font-size: 80px;
+  color: rgb(201, 215, 242);
+  margin: 5px;
+}
+
+#securityMsg{
+  margin: 5px;
+}
+
+button#ok{
+  background-color: rgb(201, 215, 242);
+  margin-top: -8px;
+  padding:6px;
+  border-radius: 100%;
+  border: none;
+  font-size: 20px;
+  cursor:pointer;
+}
+
+button#ok:hover{
+  background-color: cornflowerblue;
+}
+
+button#ok:active{
+  background-color: blue;
+}
+
+ul.security {
+  margin: 20px;
+  padding: 50;
+  text-align: left;
+}
+
+.box{
+  flex:1;
+  margin:12px;
+  width: 300px;
+  padding: 18px;
+  text-align: center;
+  font-weight: 900;
+  color: black;
+  font-family: arial;
+  position: relative;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.box.user{
+  background: rgb(125, 216, 125);
+  margin-left: auto;
+}
+
+.box.user::after{
+  content:"";
+  display: block;
+  position: absolute;
+  right:-10px;
+  top:22px;
+  width:0;
+  height:0;
+  border-top:8px solid transparent;
+  border-bottom:8px solid transparent;
+  border-left:15px solid rgb(125, 216, 125);
+}
+
+.box.reply{
+  background-color: white;
+}
+
+.box.reply::before{
+  content:"";
+  display: block;
+  position: absolute;
+  left:-10px;
+  top:22px;
+  width:0;
+  height:0;
+  border-top:8px solid transparent;
+  border-bottom:8px solid transparent;
+  border-right:15px solid white;
+}
+
+.fas.fa-check-double{
+  color:rgb(233, 230, 230);
+  position: absolute;
+  right: 12px;
+  bottom:5px;
+  
+}
+
+#time{
+  color: rgb(233, 230, 230);
+  font-size:12px;
+  position: absolute;
+  right: 35px;
+  bottom: 5px;
+}
+
+#datepicker{
+  font-size: 10px;
+  color:gray;
+}
+
+/* style the message form */
+
+.chatbox{
+  padding:5px;
+}
+
+form {
+  margin:8px;
+  gap: 10px;
+  justify-content: center;
+}
+
+input[type=text] {
+  width: 95%;
+  height: 30px;
+  bottom:10px;
+  border-radius: 5px;
+}
+
+button#send{
+  position: absolute;
+  padding: 8px;
+  border-radius: 100%;
+  right: 8px;
+  font-size: 22px;
+  color: rgb(45,96,197);
+  border:none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button#send:hover {
+  background-color: gainsboro;
+}
+
+button#send:active {
+  background-color: #818781;
+  transform: translateY(4px);
+}
+
+#welcome{
+  text-align: center;
+}
